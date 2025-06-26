@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <title>منتجاتنا - الصدارة</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #1a1a1a; /* أسود */
+        margin: 0;
+        padding: 0;
+        direction: rtl;
+        color: white; /* النص باللون الأبيض */
+      }
+
+      header {
+        background-color: #0d1b2a; /* أزرق غامق */
+        padding: 10px 20px;
+        text-align: right;
+        border-bottom: 1px solid #ccc;
+      }
+
+      header a {
+        background-color: #1a73e8; /* أزرق متوسط */
+        color: white;
+        padding: 8px 16px;
+        border-radius: 6px;
+        text-decoration: none;
+        font-weight: bold;
+      }
+
+      header a:hover {
+        background-color: #144a8b; /* أزرق غامق عند المرور */
+      }
+
+      main {
+        padding: 30px;
+        max-width: 1200px;
+        margin: auto;
+      }
+
+      h2 {
+        text-align: center;
+        color: #ffffff; /* النص بالأبيض */
+        margin-bottom: 30px;
+      }
+
+      .product-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+      }
+
+      .product-item {
+        background-color: #2c3e50; /* أزرق غامق فاتح */
+        border: 1px solid #34495e; /* أزرق غامق متوسط */
+        border-radius: 10px;
+        padding: 15px;
+        width: 250px;
+        text-align: center;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .product-item:hover {
+        transform: scale(1.05);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+      }
+
+      .product-item img {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+        transition: transform 0.3s ease;
+      }
+
+      .product-item:hover img {
+        transform: scale(1.05);
+      }
+
+      .learn-more {
+        display: inline-block;
+        margin-top: 10px;
+        background-color: #1a73e8; /* أزرق متوسط */
+        color: white;
+        padding: 8px 16px;
+        border-radius: 6px;
+        text-decoration: none;
+        font-weight: bold;
+      }
+
+      .learn-more:hover {
+        background-color: #144a8b; /* أزرق غامق عند المرور */
+      }
+
+      footer {
+        background-color: #0d1b2a; /* أزرق غامق */
+        color: white;
+        text-align: center;
+        padding: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <a href="index.html">العودة للرئيسية</a>
+    </header>
+    <main>
+      <h2>الأقسام الرئيسية</h2>
+      <div class="product-list">
+        <div class="product-item">
+          <img src="images/ruz/ruz1.png" alt="رز" />
+          <h3>رز</h3>
+          <a class="learn-more" href="products-pages/rice.html">ادخل القسم</a>
+        </div>
+        <div class="product-item">
+          <img src="images/سكر/5.png" alt="منتج السكر" />
+          <h3>منتج السكر</h3>
+          <a href="products-pages/sugar.html" class="learn-more">ادخل القسم</a>
+        </div>
+        <div class="product-item">
+          <img src="images/3.png" alt="مسحوق غسيل" />
+          <h3>مسحوق غسيل</h3>
+          <a class="learn-more" href="products-pages/detergent.html">ادخل القسم</a>
+        </div>
+        <div class="product-item">
+          <img src="images/semolina/2.png" alt="طحين وسميد" />
+          <h3> طحين وسميد</h3>
+          <a class="learn-more" href="products-pages/flour.html">ادخل القسم</a>
+        </div>
+      </div>
+    </main>
+    <footer>
+      &copy; 2025 شركة الصدارة للطباعة والتغليف | جميع الحقوق محفوظة
+    </footer>
+  </body>
+</html>
