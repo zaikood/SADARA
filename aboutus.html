@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+
+<html dir="rtl" lang="ar">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>من نحن - شركة الصدارة</title>
+    <style>
+      body {
+        font-family: "Arial", sans-serif;
+        margin: 0;
+        padding: 0;
+        line-height: 1.8;
+        background-color: hsl(41, 44%, 86%);
+        color: #333;
+        animation: fadeInBody 1s ease-in-out;
+      }
+
+      @keyframes fadeInBody {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      header {
+        background-color: #1d3557;
+        color: rgb(255, 255, 255);
+        padding: 30px 0;
+        text-align: center;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        animation: slideDown 1s ease;
+      }
+
+      @keyframes slideDown {
+        from {
+          transform: translateY(-30px);
+          opacity: 0;
+        }
+        to {
+          transform: translateY(0);
+          opacity: 1;
+        }
+      }
+
+      header h1 {
+        font-size: 2.8rem;
+        margin-bottom: 10px;
+      }
+
+      header p {
+        font-size: 1.4rem;
+        margin: 0;
+      }
+
+      .container {
+        max-width: 1000px;
+        margin: auto;
+        padding: 40px 20px;
+        background-color: hsl(41, 44%, 86%);
+      }
+
+      h2 {
+        color: #1d3557;
+        font-size: 2rem;
+        margin-bottom: 10px;
+        animation: fadeInUp 1s ease forwards;
+      }
+
+      .about-section {
+        margin-bottom: 40px;
+        opacity: 0;
+        transform: translateY(20px);
+        animation: fadeInUp 0.8s ease forwards;
+      }
+
+      .about-section:nth-child(2) {
+        animation-delay: 0.2s;
+      }
+      .about-section:nth-child(3) {
+        animation-delay: 0.4s;
+      }
+      .about-section:nth-child(4) {
+        animation-delay: 0.6s;
+      }
+      .about-section:nth-child(5) {
+        animation-delay: 0.8s;
+      }
+
+      @keyframes fadeInUp {
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      p,
+      li {
+        font-size: 1.2rem;
+        line-height: 2;
+      }
+
+      ul {
+        padding-right: 20px;
+      }
+
+      ul li {
+        margin-bottom: 8px;
+        position: relative;
+        padding-right: 20px;
+      }
+
+      ul li::before {
+        content: "✔";
+        position: absolute;
+        right: 0;
+        color: #1d3557;
+        font-weight: bold;
+      }
+
+      @media (max-width: 600px) {
+        header h1 {
+          font-size: 2rem;
+        }
+
+        .container {
+          padding: 20px;
+        }
+
+        p,
+        li {
+          font-size: 1rem;
+        }
+      }
+    
+@media (max-width: 600px) {
+  .navbar-top {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar-buttons {
+    flex-direction: column;
+    width: 100%;
+    gap: 5px;
+  }
+
+  #company-name {
+    font-size: 1rem;
+    text-align: center;
+    width: 100%;
+  }
+
+  .navbar-links a {
+    display: block;
+    margin: 5px 0;
+    font-size: 1rem;
+  }
+}
+
+</style>
+    <style>
+      :root {
+        --blue-light: #000000;
+        --blue-gradient-start: rgb(16, 77, 146);
+        --blue-gradient-end: #000000e7;
+        --white: #ebe1cc;
+        --dark-blue: #2c466e;
+        --hover-blue: #0b4a99;
+        --shadow-light: rgba(163, 196, 243, 0.3);
+        --shadow-hover: rgba(10, 70, 150, 0.4);
+      }
+      body {
+        font-family: "Tajawal", sans-serif;
+        margin: 0;
+        background-color: var(--white);
+        color: var(--dark-blue);
+        transition: background-color 0.3s, color 0.3s;
+      }
+      .navbar-top {
+        background-color: var(--blue-gradient-start);
+        color: white;
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 20px;
+        align-items: center;
+      }
+      .navbar-buttons {
+        display: flex;
+        gap: 10px;
+      }
+      .navbar-buttons button {
+        background-color: white;
+        color: var(--blue-gradient-start);
+        border: none;
+        padding: 5px 10px;
+        cursor: pointer;
+        border-radius: 5px;
+        font-weight: bold;
+      }
+      .dark-mode {
+        background-color: #121212 !important;
+      }
+      .dark-mode .navbar-top {
+        background-color: #1f1f1f !important;
+      }
+      .dark-mode .navbar-buttons button {
+        background-color: #333 !important;
+      }
+    </style>
+    <script>
+      const translations = {
+        ar: {
+          company: "الصدارة للطباعه والتغليف",
+          language: "English / العربية",
+          mode: "🌓 الوضع",
+          headerTitle: "من نحن",
+          headerSubtitle: "شركة الصدارة للطباعة والتغليف",
+          aboutTitle: "نبذة عن الشركة",
+          aboutText:
+            "تأسست شركة الصدارة للطباعة والتغليف لتقديم حلول طباعة وتغليف عالية الجودة تخدم الأسواق المحلية والإقليمية. نحن نؤمن بالإبداع والجودة والدقة في كل منتج نقدمه.",
+          visionTitle: "رؤيتنا",
+          visionText:
+            "أن نكون الشركة الرائدة في مجال الطباعة والتغليف في المنطقة، من خلال تقديم منتجات مبتكرة تلبي تطلعات عملائنا.",
+          missionTitle: "مهمتنا",
+          missionText:
+            "تقديم حلول طباعة وتغليف مخصصة بأعلى جودة وبأسعار تنافسية، مع الالتزام الكامل بالمواعيد وخدمة العملاء.",
+          valuesTitle: "قيمنا",
+          valuesList: ["الجودة", "الاحترافية", "الابتكار", "الالتزام"],
+        },
+        en: {
+          company: "Sadara Printing & Packaging",
+          language: "العربية / English",
+          mode: "🌓 Mode",
+          headerTitle: "About Us",
+          headerSubtitle: "Sadara Printing & Packaging",
+          aboutTitle: "About the Company",
+          aboutText:
+            "Sadara was established to provide high-quality printing and packaging solutions for local and regional markets. We believe in creativity, quality, and precision in every product we offer.",
+          visionTitle: "Our Vision",
+          visionText:
+            "To be the leading company in the printing and packaging industry in the region by offering innovative products that meet our clients’ expectations.",
+          missionTitle: "Our Mission",
+          missionText:
+            "To provide customized printing and packaging solutions of the highest quality at competitive prices, with full commitment to deadlines and customer service.",
+          valuesTitle: "Our Values",
+          valuesList: [
+            "Quality",
+            "Professionalism",
+            "Innovation",
+            "Commitment",
+          ],
+        },
+      };
+
+      function toggleDarkMode() {
+        document.body.classList.toggle("dark-mode");
+      }
+
+      function switchLanguage() {
+        const html = document.documentElement;
+        const newLang = html.lang === "ar" ? "en" : "ar";
+        html.lang = newLang;
+        html.dir = newLang === "ar" ? "rtl" : "ltr";
+
+        const t = translations[newLang];
+        document.getElementById("company-name").innerText = t.company;
+        document.getElementById("lang-btn").innerText = t.language;
+        document.getElementById("mode-btn").innerText = t.mode;
+
+        document.getElementById("header-title").innerText = t.headerTitle;
+        document.getElementById("header-subtitle").innerText = t.headerSubtitle;
+        document.getElementById("about-title").innerText = t.aboutTitle;
+        document.getElementById("about-text").innerText = t.aboutText;
+        document.getElementById("vision-title").innerText = t.visionTitle;
+        document.getElementById("vision-text").innerText = t.visionText;
+        document.getElementById("mission-title").innerText = t.missionTitle;
+        document.getElementById("mission-text").innerText = t.missionText;
+        document.getElementById("values-title").innerText = t.valuesTitle;
+
+        const valuesList = document.querySelectorAll("#values-list li");
+        valuesList.forEach((li, index) => {
+          li.innerText = t.valuesList[index];
+        });
+      }
+
+      window.onload = () => {
+        switchLanguage();
+        switchLanguage();
+      };
+    </script>
+  </head>
+  <body>
+    <div class="navbar-top">
+      <div id="company-name">الصدارة للطباعه والتغليف</div>
+      <div class="navbar-buttons">
+        <button id="lang-btn" onclick="switchLanguage()">
+          English / العربية
+        </button>
+        <button id="mode-btn" onclick="toggleDarkMode()">🌓 الوضع</button>
+      </div>
+    </div>
+    <header>
+      <h1 id="header-title">من نحن</h1>
+      <p id="header-subtitle">شركة الصدارة للطباعة والتغليف</p>
+    </header>
+    <div class="container">
+      <section class="about-section">
+        <h2 id="about-title">نبذة عن الشركة</h2>
+        <p id="about-text">
+          تأسست شركة الصدارة للطباعة والتغليف لتقديم حلول طباعة وتغليف عالية
+          الجودة تخدم الأسواق المحلية والإقليمية. نحن نؤمن بالإبداع والجودة
+          والدقة في كل منتج نقدمه.
+        </p>
+      </section>
+      <section class="about-section">
+        <h2 id="vision-title">رؤيتنا</h2>
+        <p id="vision-text">
+          أن نكون الشركة الرائدة في مجال الطباعة والتغليف في المنطقة، من خلال
+          تقديم منتجات مبتكرة تلبي تطلعات عملائنا.
+        </p>
+      </section>
+      <section class="about-section">
+        <h2 id="mission-title">مهمتنا</h2>
+        <p id="mission-text">
+          تقديم حلول طباعة وتغليف مخصصة بأعلى جودة وبأسعار تنافسية، مع الالتزام
+          الكامل بالمواعيد وخدمة العملاء.
+        </p>
+      </section>
+      <section class="about-section">
+        <h2 id="values-title">قيمنا</h2>
+        <ul id="values-list">
+          <li>الجودة</li>
+          <li>الاحترافية</li>
+          <li>الابتكار</li>
+          <li>الالتزام</li>
+        </ul>
+      </section>
+    </div>
+  </body>
+</html>

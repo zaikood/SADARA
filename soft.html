@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <title>lady life - الصدارة</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Tajawal", sans-serif;
+        background-color: #ebe1cc;
+        color: #1a3e7b;
+        padding: 40px;
+        line-height: 1.7;
+        max-width: 800px;
+        margin: auto;
+      }
+      img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 12px;
+        margin-bottom: 20px;
+      }
+      a {
+        display: inline-block;
+        margin-top: 20px;
+        background-color: #1a3e7b;
+        color: white;
+        padding: 12px 20px;
+        text-decoration: none;
+        border-radius: 8px;
+      }
+    </style>
+
+    <style>
+      :root {
+        --blue-light: #000000;
+        --blue-gradient-start: rgb(16, 77, 146);
+        --blue-gradient-end: #000000e7;
+        --white: #ebe1cc;
+        --dark-blue: #2c466e;
+        --hover-blue: #0b4a99;
+        --shadow-light: rgba(163, 196, 243, 0.3);
+        --shadow-hover: rgba(10, 70, 150, 0.4);
+      }
+      body {
+        font-family: "Tajawal", sans-serif;
+        margin: 0;
+        background-color: var(--white);
+        color: var(--dark-blue);
+        transition: background-color 0.3s, color 0.3s;
+      }
+      .navbar-top {
+        background-color: var(--blue-gradient-start);
+        color: white;
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 20px;
+        align-items: center;
+      }
+      .navbar-buttons {
+        display: flex;
+        gap: 10px;
+      }
+      .navbar-buttons button {
+        background-color: white;
+        color: var(--blue-gradient-start);
+        border: none;
+        padding: 5px 10px;
+        cursor: pointer;
+        border-radius: 5px;
+        font-weight: bold;
+      }
+      .dark-mode {
+        background-color: #121212 !important;
+        color: #f0f0f0 !important;
+      }
+      .dark-mode .navbar-top {
+        background-color: #1f1f1f !important;
+      }
+      .dark-mode .navbar-buttons button {
+        background-color: #333 !important;
+        color: #f0f0f0 !important;
+      }
+    </style>
+    <script>
+      const translations = {
+        ar: {
+          company: "الصدارة للطباعه والتغليف",
+          language: "English / العربية",
+          mode: "🌓 الوضع",
+        },
+        en: {
+          company: "Sadara Printing & Packaging",
+          language: "العربية / English",
+          mode: "🌓 Mode",
+        },
+      };
+
+      function toggleDarkMode() {
+        document.body.classList.toggle("dark-mode");
+      }
+
+      function switchLanguage() {
+        const html = document.documentElement;
+        const newLang = html.lang === "ar" ? "en" : "ar";
+        html.lang = newLang;
+        html.dir = newLang === "ar" ? "rtl" : "ltr";
+
+        const t = translations[newLang];
+        document.getElementById("company-name").innerText = t.company;
+        document.getElementById("lang-btn").innerText = t.language;
+        document.getElementById("mode-btn").innerText = t.mode;
+      }
+
+      window.onload = () => {
+        switchLanguage();
+        switchLanguage();
+      };
+    </script>
+  </head>
+  <body>
+    <div class="navbar-top">
+      <div id="company-name">الصدارة للطباعه والتغليف</div>
+      <div class="navbar-buttons">
+        <button id="lang-btn" onclick="switchLanguage()">
+          English / العربية
+        </button>
+        <button id="mode-btn" onclick="toggleDarkMode()">🌓 الوضع</button>
+      </div>
+    </div>
+
+    <h1>soft</h1>
+    <img src="images/2.png" alt="soft" />
+    <p>
+      soft هو أحد منتجاتنا عالية الجودة في مجال التغليف. يتميز بتصميم أنيق
+      ومتين، مثالي لتغليف المنتجات النسائية والعناية الشخصية. نقدم لكم تغليف
+      عملي بمظهر جذاب وجودة لا تضاهى.
+    </p>
+    <a href="index.html">عودة إلى الرئيسية</a>
+  </body>
+</html>
